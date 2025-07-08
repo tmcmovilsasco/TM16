@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_city_zip_form">
+        <field name="name">res.city.zip.form</field>
+        <field name="model">res.city.zip</field>
+        <field name="arch" type="xml">
+            <form string="Zip">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="tipo"/>
+                    </group>
+                    <group>
+                        <field name="city_id"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_city_zip_tree">
+        <field name="name">res.city.zip.tree</field>
+        <field name="model">res.city.zip</field>
+        <field name="arch" type="xml">
+            <tree string="Zips" editable="top">
+                <field name="name"/>
+                <field name="tipo"/>
+                <field name="city_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_city_zip_filter" model="ir.ui.view">
+        <field name="name">res.city.zip.select</field>
+        <field name="model">res.city.zip</field>
+        <field name="arch" type="xml">
+            <search string="Search zip">
+                <field name="name"/>
+                <field name="tipo"/>
+                <field name="city_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_zip_tree" model="ir.actions.act_window">
+        <field name="name">Códigos postales</field>
+        <field name="res_model">res.city.zip</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        name="Códigos postales"
+        id="locations_menu_zips"
+        parent="contacts.menu_localisation"
+        action="action_zip_tree"
+        sequence="5"
+        />
+
+</odoo>

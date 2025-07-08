@@ -1,0 +1,31 @@
+<odoo>
+
+    <!-- Add cities to the company form -->
+    <record id="view_company_form_city" model="ir.ui.view">
+        <field name="name">res.company.form.city</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <field name="street2" position="after">
+                <field name="zip_id" options="{'create_name_field': 'city'}" colspan="4" placeholder="City completion"/>
+            </field>
+            <field name="city" position="after">
+                <field name="country_enforce_cities" invisible="1"/>
+                <field name="city_id" invisible="country_enforce_cities == False"/>
+            </field>
+            <field name="city" position="attributes">
+                <attribute name="required">country_enforce_cities</attribute>
+                <!--TODO: Result from converting 'attrs' attribute override without options for ['invisible', 'readonly', 'column_invisible'] to separate attributes
+                     Remove redundant empty tags below for any of those attributes that are not present in the field tag in any of the parent views
+                     If someone later adds one of these attributes in the parent views, they would likely be unaware it's still overridden in this view, resulting in unexpected behaviour, which should be avoided-->
+                <!--TODO: Result from 'attrs' -> 'invisible' conversion without also overriding 'states' attribute
+                     Check if this field tag contained a states attribute in any of the parent views, that should be combined into this 'invisible' attribute
+                     (If any states attributes existed in parent views, they'll also be marked with a TODO)-->
+                <attribute name="invisible"/>
+                <attribute name="readonly"/>
+                <attribute name="column_invisible"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

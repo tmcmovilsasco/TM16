@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_partner_form_base_location" model="ir.ui.view">
+        <field name="name">res.partner.zip_id.2</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Tipo de Persona -->
+                <xpath expr="//field[@name='company_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='company_type']" position="before">
+                    <field name="person_type" required="1" widget="radio"/>
+                </xpath>
+                <!-- ... -->
+                <!--<xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('is_company', '=', False)], 'required': [('is_company', '=', True)]}</attribute>
+                </xpath>-->
+
+            <xpath expr="//h1//field[@name='name']/.." position="after">
+                    <div class="oe_edit_only">
+                        <group col="4" invisible="is_company">
+                            <field name="firstname" required="not other_name and not is_company"/>
+                            <field name="other_name" required="not firstname and not is_company"/>
+                            <field name="lastname" required="not other_lastname and not is_company"/>
+                            <field name="other_lastname" required="not lastname and not is_company"/>
+                        </group>
+                    </div>
+                </xpath>
+
+            <field name="city" position="before">
+                <field name="country_code" invisible="1"/>
+                <field name="zip_id" options="{'create_name_field': 'city', 'no_open': True, 'no_create': True}" placeholder="Busqueda de Código postal" class="oe_edit_only"/>
+            </field>
+            <field name="city" position="replace">
+                    <field name="city_id" placeholder="Ciudad" class="o_address_city" options="{&quot;no_open&quot;: True}"/>
+                    <field name="city" invisible="1"/>
+            </field>
+
+            <field name="category_id" position="after">
+                <field name="ciiu" widget="many2many_tags" options="{'no_edit': True, 'no_open': True, 'no_create': True}" invisible="type == 'delivery'" domain="[('type', '=', 'other')]"/>
+            </field>
+
+
+            <!-- child_ids -->
+            <xpath expr="//field[@name='child_ids']/form//field[@name='name']" position="attributes">
+                <attribute name="readonly">not is_company</attribute>
+                <attribute name="required">is_company</attribute>
+                <!--TODO: Result from converting 'attrs' attribute override without options for ['invisible', 'column_invisible'] to separate attributes
+                     Remove redundant empty tags below for any of those attributes that are not present in the field tag in any of the parent views
+                     If someone later adds one of these attributes in the parent views, they would likely be unaware it's still overridden in this view, resulting in unexpected behaviour, which should be avoided-->
+                <!--TODO: Result from 'attrs' -> 'invisible' conversion without also overriding 'states' attribute
+                     Check if this field tag contained a states attribute in any of the parent views, that should be combined into this 'invisible' attribute
+                     (If any states attributes existed in parent views, they'll also be marked with a TODO)-->
+                <attribute name="invisible"/>
+                <attribute name="column_invisible"/>
+            </xpath>
+
+            <xpath expr="//field[@name='child_ids']/form//field[@name='name']" position="after">
+                <div class="oe_edit_only" colspan="2">
+                    <field name="is_company" invisible="True"/>
+                    <group invisible="is_company">
+                        <field name="firstname" required="not other_name and not is_company"/>
+                        <field name="other_name" required="not firstname and not is_company"/>
+                        <field name="lastname" required="not other_lastname and not is_company"/>
+                        <field name="other_lastname" required="not lastname and not is_company"/>
+                    </group>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/form//field[@name='city']" position="before">
+                <field name="country_code" invisible="1"/>
+                <field name="zip_id" options="{'create_name_field': 'city', 'no_open': True, 'no_create': True}" placeholder="Busqueda de Código postal" class="oe_edit_only" required="country_code == 'CO'"/>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/form//field[@name='city']" position="replace">
+                    <field name="city_id" placeholder="City" class="o_address_city" options="{&quot;no_open&quot;: True}"/>
+                    <field name="city" invisible="1"/>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/form//label[1]" position="attributes">
+                <!--TODO: Result from 'attrs' -> 'invisible' conversion without also overriding 'states' attribute
+                     Check if this label tag contained a states attribute in any of the parent views, in which case it should be combined into this 'invisible' attribute
+                     (If any states attributes existed in parent views, they'll also be marked with a TODO)-->
+                <attribute name="invisible">not type</attribute>
+            </xpath>
+            <xpath expr="//field[@name='child_ids']/form//div[1]" position="attributes">
+                <!--TODO: Result from 'attrs' -> 'invisible' conversion without also overriding 'states' attribute
+                     Check if this div tag contained a states attribute in any of the parent views, in which case it should be combined into this 'invisible' attribute
+                     (If any states attributes existed in parent views, they'll also be marked with a TODO)-->
+                <attribute name="invisible">not type</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_form_base_location_document" model="ir.ui.view">
+        <field name="name">res.partner.document</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="l10n_latam_base.view_partner_latam_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//label[@for='l10n_latam_identification_type_id']" position="replace">
+
+            </xpath>
+
+            <xpath expr="//field[@name='l10n_latam_identification_type_id']/.." position="replace">
+
+                    <field name="vat_type" required="True" readonly="parent_id"/>
+                    <field name="vat" readonly="parent_id" string="Número de documento"/>
+
+                    <field name="vat_vd" force_save="1" required="vat_type == '31'" readonly="True or (parent_id)" invisible="vat_type != '31'"/>
+
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

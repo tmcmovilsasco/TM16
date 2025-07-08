@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_city_zip,access_res_city_zip,model_res_city_zip,base.group_user,1,1,1,0
+access_ciiu,access_ciiu,model_ciiu,base.group_user,1,1,1,0
+access_product_scheme,access_product_scheme,model_product_scheme,base.group_user,1,1,1,0
+access_unspsc_segment,access_unspsc_segment,model_unspsc_segment,base.group_user,1,1,1,0
+access_unspsc_family,access_unspsc_family,model_unspsc_family,base.group_user,1,1,1,0
+access_unspsc_class,access_unspsc_class,model_unspsc_class,base.group_user,1,1,1,0
+access_unspsc_product,access_unspsc_product,model_unspsc_product,base.group_user,1,1,1,0
+access_product_uom_code,access_product_uom_code,model_product_uom_code,base.group_user,1,1,1,0

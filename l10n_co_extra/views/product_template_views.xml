@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_template_unspsc" model="ir.ui.view">
+            <field name="name">product.template.form.unspsc</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="categ_id" position="after">
+                    <field name="product_scheme_id" options='{"no_open": True}'/>
+                    <field name="unspsc_product_id"/>
+                    <field name="unspsc_class_id"/>
+                    <field name="unspsc_family_id"/>
+                    <field name="unspsc_segment_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

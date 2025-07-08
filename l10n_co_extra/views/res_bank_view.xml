@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_bank_city_form">
+            <field name="name">res.bank.city.form</field>
+            <field name="inherit_id" ref="base.view_res_bank_form"/>
+            <field name="model">res.bank</field>
+            <field name="arch" type="xml">
+                <field name="city" position="before">
+                    <field name="zip_id"
+                       options="{'create_name_field': 'city', 'no_open': True, 'no_create': True}"
+                       placeholder="Busqueda de Código postal"
+                       class="oe_edit_only"/>
+                </field>
+                <field name="city" position="replace">
+                    <field name="city_id" placeholder="Ciudad" class="o_address_city" options='{"no_open": True}'/>
+                    <field name="city" invisible="1"/>
+                </field>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>
