@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="stock_picking_odoo_envioclick" model="ir.ui.view">
+            <field name="name">stock_picking_odoo_envioclick</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='note']" position="after">
+                    <page name="envioclick" string="EnvioClick" attrs="{'invisible':[('shipment_envioclick','=',False)]}">
+                        <group>
+                            <group>
+                                <table style="width: 100%">
+                                                        <tr>
+                                                            <td>
+                                                               <strong><label style="font-weight: bold;" for="packages"/></strong>
+                                                            </td>
+                                                            <td colspan="3">
+                                                                <field name="packages" nolabel="1" readonly="1" force_save="1" options="{'no_open': True, 'no_create': True,'no_quick_create':True,'no_create_edit':True}"/>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong><label style="font-weight: bold;" for="length"/></strong>
+                                                            </td>
+                                                            <td>
+                                                                <field name="length" nolabel="1" readonly="1" force_save="1"/>
+                                                            </td>
+                                                            <td>
+                                                                <strong><label style="font-weight: bold;" for="height"/></strong>
+                                                            </td>
+                                                            <td>
+                                                                <field name="height" nolabel="1" readonly="1" force_save="1"/>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <strong><label style="font-weight: bold;" for="width"/></strong>
+                                                            </td>
+                                                            <td>
+                                                                <field name="width" nolabel="1" readonly="1" force_save="1"/>
+                                                            </td>
+                                                            <td>
+                                                                <strong><label style="font-weight: bold;" for="weight"/></strong>
+                                                            </td>
+                                                            <td>
+                                                                <field name="weight" nolabel="1" readonly="1" force_save="1"/>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                                    <div>
+                                                        <table style="width: 100%">
+
+                                                            <tr >
+                                                                <td>
+                                                                    <strong><label style="font-weight: bold;" for="shipment_envioclick"/></strong>
+                                                                </td>
+                                                                <td colspan="3">
+                                                                    <field name="shipment_envioclick" readonly="1" nolabel="1" options="{'no_create': True,'no_quick_create':True,'no_create_edit':True}"/>
+                                                                </td>
+                                                            </tr>
+                                                            <tr >
+                                                                <td colspan="4">
+                                                                    <field name="url_envioclick" widget="url" readonly="1" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+
+                            </group>
+
+                            <group>
+                                <field name="qr_url" widget="image" readonly="1" nolabel="1"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+    </record>
+
+    <record id="stock_picking_tree_odoo_envioclick" model="ir.ui.view">
+            <field name="name">stock_picking_tree_odoo_envioclick</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.vpicktree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="decoration-warning">state_envio == 'envioclick_espera'</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state']" position="after">
+                    <field name="state_envio" readonly="1" />
+                </xpath>
+            </field>
+    </record>
+</odoo>

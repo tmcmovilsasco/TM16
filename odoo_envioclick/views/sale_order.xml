@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="sale_order_odoo_envioclick" model="ir.ui.view">
+            <field name="name">sale_order_odoo_envioclick</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='note_group']/group" position="attributes">
+                    <attribute name="colspan">2</attribute>
+                </xpath>
+                <xpath expr="//header" position="inside">
+                    <button name="button_generate_shipment"  attrs="{'invisible':['|',('state_envioclick','!=','quotation'),('state','!=', 'sale')]}" string="Generar Guía" class="oe_highlight" type="object"/>
+                </xpath>
+                <xpath expr="//field[@name='tax_totals']" position="before">
+                    <field name="amount_shipment" readonly="1" force_save="1" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+                <xpath expr="//group[@name='note_group']/group" position="replace">
+                    <div colspan="3">
+                        <table style="width: 100%">
+                                <tr>
+                                    <td>
+                                        <strong>EnvioClick</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div style="border: 1px solid; border-radius: 3px;padding: 10px;word-wrap: break-word;">
+                                            <table style="table-layout:fixed; width: 100%">
+                                                <tr>
+                                                    <td>
+                                                       <strong><label style="font-weight: bold;" for="packages"/></strong>
+                                                    </td>
+                                                    <td colspan="3">
+                                                        <field name="packages" nolabel="1" force_save="1" options="{'no_open': True, 'no_create': True,'no_quick_create':True,'no_create_edit':True}"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong><label style="font-weight: bold;" for="length_packages_total"/></strong>
+                                                    </td>
+                                                    <td>
+                                                        <field name="length_packages_total" nolabel="1" readonly="1" force_save="1"/>
+                                                    </td>
+                                                    <td>
+                                                        <strong><label style="font-weight: bold;" for="height_packages_total"/></strong>
+                                                    </td>
+                                                    <td>
+                                                        <field name="height_packages_total" nolabel="1" readonly="1" force_save="1"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong><label style="font-weight: bold;" for="width_packages_total"/></strong>
+                                                    </td>
+                                                    <td>
+                                                        <field name="width_packages_total" nolabel="1" readonly="1" force_save="1"/>
+                                                    </td>
+                                                    <td>
+                                                        <strong><label style="font-weight: bold;" for="weight_products_total"/></strong>
+                                                    </td>
+                                                    <td>
+                                                        <field name="weight_products_total" nolabel="1" readonly="1" force_save="1"/>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-top: 1px solid red;">
+                                                    <td colspan="4">
+                                                        <field name="state_envioclick" nolabel="1" invisible="1" force_save="1"/>
+                                                        <field name="allow_envioclick" nolabel="1" invisible="1" force_save="1"/>
+                                                        <button name="button_get_quotation"  attrs="{'invisible':['|',('state_envioclick','!=','without_quotation'),('allow_envioclick','=',False)]}" string="Cotizar EnvioClick" class="oe_highlight oe_edit_only" type="object"/>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                            <div>
+                                                <table style="table-layout:fixed; width: 100%">
+                                                    <tr attrs="{'invisible':[('state_envioclick','!=','quotation')]}">
+                                                        <td>
+                                                            <strong><label style="font-weight: bold;" for="quotation_envioclick"/></strong>
+                                                        </td>
+                                                        <td colspan="3">
+                                                            <field name="quotation_envioclick" domain="[('sale_id', '=', id)]" nolabel="1" options="{'no_open': True, 'no_create': True,'no_quick_create':True,'no_create_edit':True}"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr attrs="{'invisible':[('state_envioclick','!=','shipment')]}">
+                                                        <td>
+                                                            <strong><label style="font-weight: bold;" for="shipment_envioclick"/></strong>
+                                                        </td>
+                                                        <td colspan="3">
+                                                            <field name="shipment_envioclick" readonly="1" nolabel="1" options="{'no_create': True,'no_quick_create':True,'no_create_edit':True}"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr attrs="{'invisible':[('state_envioclick','!=','shipment'), ('shipment_envioclick','=',False)]}">
+                                                        <td colspan="4">
+                                                            <field name="url_envioclick" widget="url" readonly="1" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">
+<!--
+                                                            <button name="button_generate_shipment"  attrs="{'invisible':[('state_envioclick','!=','quotation')]}" string="Generar Guía" class="oe_highlight oe_edit_only" type="object"/>
+-->
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                        </table>
+                    </div>
+                </xpath>
+                <xpath expr="//group[@name='note_group']" position="after">
+                    <group name="note_group_note"  col="6" class="mt-2 mt-md-0">
+                        <group colspan="3">
+                            <field colspan="2" name="note" nolabel="1" placeholder="Terms and conditions..."/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+    </record>
+
+</odoo>

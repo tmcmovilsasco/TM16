@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="odoo_envioclick.shipment_form">
+      <field name="name">Shipment form</field>
+      <field name="model">odoo_envioclick.shipment</field>
+      <field name="arch" type="xml">
+          <form>
+              <header>
+                  <button name="track" string="Track" class="oe_highlight" type="object"/>
+<!--
+                  <button name="descargar_pdf" string="Descargar PDF" class="oe_highlight" type="object"/>
+-->
+                  <field name="state" widget="statusbar"
+                         statusbar_visible="pendiente_de_recoleccion,en_ruta_a_recoleccion,en_transito,en_ruta_de_entrega_final,entregado"/>
+              </header>
+              <sheet>
+                  <widget name="web_ribbon" text="Cancelado" bg_color="bg-danger" states='eancelado' />
+                  <widget name="web_ribbon" text="Entregado" states='entregado' />
+                  <div class="oe_title">
+                      <h1>
+                          <field name="carrier" readonly="1"/>
+                          <span> - </span>
+                          <field name="tracker" readonly="1"/>
+                      </h1>
+                  </div>
+                  <group>
+                      <group>
+                          <field name="sale_id" readonly="1"/>
+                          <field name="idRate" readonly="1"/>
+                          <field name="idOrder" readonly="1"/>
+                          <field name="quotation_id" readonly="1"/>
+                          <field name="myShipmentReference" readonly="1"/>
+                          <field name="insurance" readonly="1"/>
+                          <field name="url" widget="url" readonly="1"/>
+                          <field name="company_id" readonly="1"  groups="base.group_multi_company"/>
+                      </group>
+                      <group>
+                          <field name="description" readonly="1"/>
+                          <field name="contentValue" readonly="1"/>
+                          <field name="flete" readonly="1"/>
+                          <field name="requestPickup" readonly="1"/>
+                          <field name="length" readonly="1"/>
+                          <field name="height" readonly="1"/>
+                          <field name="width" readonly="1"/>
+                          <field name="weight" readonly="1"/>
+                      </group>
+                  </group>
+                  <group>
+                        <group name="origin" string="Origin">
+                            <field name="origin_company" readonly="1"/>
+                            <field name="origin_firstName" readonly="1"/>
+                            <field name="origin_lastName" readonly="1"/>
+                            <field name="origin_email" readonly="1"/>
+                            <field name="origin_phone" readonly="1"/>
+                            <field name="origin_address" readonly="1"/>
+                            <field name="origin_crossStreet" readonly="1"/>
+                            <field name="origin_reference" readonly="1"/>
+                            <field name="origin_suburb" readonly="1"/>
+                            <field name="origin_daneCode" readonly="1"/>
+                        </group>
+                        <group name="destination" string="Destination">
+
+                            <field name="destination_company" readonly="1"/>
+                            <field name="destination_firstName" readonly="1"/>
+                            <field name="destination_lastName" readonly="1"/>
+                            <field name="destination_email" readonly="1"/>
+                            <field name="destination_phone" readonly="1"/>
+                            <field name="destination_address" readonly="1"/>
+                            <field name="destination_crossStreet" readonly="1"/>
+                            <field name="destination_reference" readonly="1"/>
+                            <field name="destination_suburb" readonly="1"/>
+                            <field name="destination_daneCode" readonly="1"/>
+                        </group>
+                  </group>
+                  <group>
+                        <group name="status" string="Status">
+                            <field name="status" readonly="1"/>
+                            <field name="statusDetail" readonly="1"/>
+                            <field name="arrivalDate" readonly="1"/>
+                            <field name="realPickupDate" readonly="1"/>
+                            <field name="realDeliveryDate" readonly="1"/>
+                        </group>
+                  </group>
+                  <group>
+                        <!--<field name="guide_pdf" nolabel="1"  widget="pdf_viewer" readonly="1"/>-->
+
+                  </group>
+              </sheet>
+              <!-- Your usual form view goes here -->
+              <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="activity_ids" widget="mail_activity"/>
+                  <field name="message_ids" widget="mail_thread"/>
+              </div>
+          </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="odoo_envioclick.windows_shipment">
+      <field name="name">Shipment EnvioClick</field>
+      <field name="res_model">odoo_envioclick.shipment</field>
+        <field name="context">{'search_default_group_carrier': 1}</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="odoo_envioclick.shipment_search_view" model="ir.ui.view">
+       <field name="name">Shipment Search View</field>
+       <field name="model">odoo_envioclick.shipment</field>
+       <field name="arch" type="xml">
+           <search string="Buscar">
+               <field name="sale_id"/>
+               <field name="partner_id"/>
+               <field name="carrier"/>
+               <field name="tracker"/>
+               <separator/>
+
+               <group expand="1" string="Agrupar por">
+                   <filter string="Ordene de Venta" name="group_sale_id" context="{'group_by':'sale_id'}"/>
+                   <filter string="Transportadora" name="group_carrier" context="{'group_by':'carrier'}"/>
+                   <filter string="Cliente" name="group_partner_id" context="{'group_by':'partner_id'}"/>
+                   <filter string="Estatus" name="group_state" context="{'group_by':'state'}"/>
+               </group>
+           </search>
+       </field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo_envioclick.shipment_list">
+        <field name="name">Shipment list</field>
+        <field name="model">odoo_envioclick.shipment</field>
+        <field name="arch" type="xml">
+            <tree create="0" decoration-success="state=='entregado'" default_order='sale_id'>
+                <field name="sale_id"/>
+                <field name="partner_id"/>
+                <field name="carrier"/>
+                <field name="tracker"/>
+                <field name="flete" sum="Total"/>
+                <field name="origin_company" readonly="1"/>
+                <field name="origin_address" readonly="1"/>
+                <field name="destination_company" readonly="1"/>
+                <field name="destination_firstName" readonly="1"/>
+                <field name="destination_lastName" readonly="1"/>
+                <field name="state"/>
+                <field name="create_uid" string="Creado por"/>
+                <field name="create_date" string="Creado en Fecha"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <menuitem name="Shipment" id="odoo_envioclick_shipment_menu" parent="odoo_envioclick_menu"
+              action="odoo_envioclick.windows_shipment" sequence="10"/>
+
+</odoo>

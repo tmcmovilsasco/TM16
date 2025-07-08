@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.actions.act_window" id="odoo_envioclick.windows_quotation">
+        <field name="name">Quotation EnvioClick</field>
+        <field name="res_model">odoo_envioclick.quotation</field>
+        <field name="context">{'search_default_group_sale_id': 1}</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record model="ir.ui.view" id="odoo_envioclick.quotation_list">
+        <field name="name">Quotation list</field>
+        <field name="model">odoo_envioclick.quotation</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" decoration-danger="state=='canceled'" decoration-success="state=='accepted'" default_order='create_date'>
+                <field name="sale_id"/>
+                <field name="partner_id"/>
+                <field name="idRate"/>
+                <field name="carrier"/>
+                <field name="product"/>
+                <field name="flete" widget='monetary'/>
+                <field name="contentValue"/>
+                <field name="state"/>
+                <field name="create_uid" string="Creado por"/>
+                <field name="create_date" string="Creado en Fecha"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="odoo_envioclick.quotation_search_view" model="ir.ui.view">
+       <field name="name">Quotation Search View</field>
+       <field name="model">odoo_envioclick.quotation</field>
+       <field name="arch" type="xml">
+           <search string="Buscar">
+               <field name="sale_id"/>
+               <field name="partner_id"/>
+               <field name="carrier"/>
+               <separator/>
+               <filter string="Esperando" name="waiting" domain="[('state','=','waiting')]" help="Cotizaciones en espera"/>
+               <filter string="Aceptadas" name="accepted" domain="[('state','=','accepted')]" help="Cotizaciones aceptadas"/>
+               <filter string="Canceladas" name="canceled" domain="[('state','=','canceled')]" help="Cotizaciones canceladas"/>
+
+               <group expand="1" string="Agrupar por">
+                   <filter string="Ordene de Venta" name="group_sale_id" context="{'group_by':'sale_id'}"/>
+                   <filter string="Transportadora" name="group_carrier" context="{'group_by':'carrier'}"/>
+                   <filter string="Cliente" name="group_partner_id" context="{'group_by':'partner_id'}"/>
+                   <filter string="Estatus" name="group_state" context="{'group_by':'state'}"/>
+               </group>
+           </search>
+       </field>
+    </record>
+
+    <menuitem name="Quotation" id="odoo_envioclick_quotation_menu" parent="odoo_envioclick_menu"
+              action="odoo_envioclick.windows_quotation" sequence="5"/>
+</odoo>

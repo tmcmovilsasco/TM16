@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem name="EnvioClick" id="odoo_envioclick_menu" parent="sale.sale_menu_root" sequence="20"/>
+
+    <menuitem name="Package Type" id="odoo_envioclick_package_type_menu" parent="stock.menu_stock_config_settings"
+              action="odoo_envioclick.package_type_window" sequence="100"/>
+
+</odoo>

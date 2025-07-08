@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_partner_form_inherit_envioclick">
+			<field name="name">res.partner.l10n_co.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+				<field name="street2" position="after">
+                    <field name="billing_address_3" />
+                </field>
+            </field>
+    </record>
+</odoo>

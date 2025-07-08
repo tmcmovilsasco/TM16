@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="res_company_settings_envioclick" model="ir.ui.view">
+            <field name="name">Settings EnvioClick</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="priority">30</field>
+            <field name="arch" type="xml">
+            <data>
+               <xpath expr="//page[1]" position="after">
+                <page name="settings_envioclick" string="Settings EnvioClick">
+                 <group string="Settings">
+                     <group>
+                         <field name="envioclick_endpoint" force_save="1"/>
+                         <field name="envioclick_api_key" force_save="1"/>
+                         <field name="test_mode" force_save="1"/>
+                         <field name="automate_shipment" force_save="1"/>
+                     </group>
+                     <group>
+                         <field name="origin_firstName" force_save="1"/>
+                         <field name="origin_lastName" force_save="1"/>
+                         <field name="default_package_description" force_save="1"/>
+                         <field name="insurance" force_save="1"/>
+                         <field name="requestPickup" force_save="1"/>
+                         <field name="pickupDate" attrs="{'invisible':[('requestPickup', '=', False)]}"/>
+                     </group>
+                 </group>
+                </page>
+                   <page name="promocion_envioclick" string="Promoción Activa">
+                       <group>
+                           <field name="promocion_activa"/>
+                           <field name="permitir_envio_promo"/>
+                       </group>
+                       <group>
+
+                       </group>
+                   </page>
+               </xpath>
+            </data>
+            </field>
+        </record>
+
+</odoo>

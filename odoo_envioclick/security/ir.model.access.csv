@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_envioclick_package_type,odoo_envioclick.package_type,model_odoo_envioclick_package_type,base.group_user,1,1,1,1
+access_odoo_envioclick_quotation,odoo_envioclick.quotation,model_odoo_envioclick_quotation,base.group_user,1,1,1,1
+access_odoo_envioclick_shipment,odoo_envioclick.shipment,model_odoo_envioclick_shipment,base.group_user,1,1,1,1
+

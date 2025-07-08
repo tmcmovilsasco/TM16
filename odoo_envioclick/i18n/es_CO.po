@@ -1,0 +1,944 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo_envioclick
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-14 21:33+0000\n"
+"PO-Revision-Date: 2021-01-14 21:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.sale_order_odoo_envioclick
+msgid "<strong>EnvioClick</strong>"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_res_company__envioclick_api_key
+msgid "API Key Authentication"
+msgstr "Autenticación de clave de API"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_quotation__state__accepted
+msgid "Accepted"
+msgstr "Aceptada"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+msgid "Aceptadas"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Actividad  de Excepción"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_search_view
+msgid "Agrupar por"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__amount_shipment
+msgid "Amount Shipment"
+msgstr "Monto de Envío"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__arrivalDate
+msgid "Arrival Date"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_attachment_count
+msgid "Attachment Count"
+msgstr "Conteo de archivos adjuntos"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_res_company__automate_shipment
+msgid "Automate Shipment"
+msgstr "Automatizar el envío"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_search_view
+msgid "Buscar"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+msgid "Canceladas"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_shipment__state__cancelado
+msgid "Cancelado"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_quotation__state__canceled
+msgid "Canceled"
+msgstr "Cancelada"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__carrier
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__carrier
+msgid "Carrier"
+msgstr "Transportista"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_search_view
+msgid "Cliente"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__code
+msgid "Code"
+msgstr "Código"
+
+#. module: odoo_envioclick
+#: model:ir.model,name:odoo_envioclick.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__company_id
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__contentValue
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__contentValue
+msgid "Content Value"
+msgstr "Valor del contenido"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+msgid "Cotizaciones aceptadas"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+msgid "Cotizaciones canceladas"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model,name:odoo_envioclick.model_odoo_envioclick_quotation
+msgid "Cotizaciones de EnvioClick"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+msgid "Cotizaciones en espera"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.sale_order_odoo_envioclick
+msgid "Cotizar EnvioClick"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_list
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_list
+msgid "Creado en Fecha"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_list
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_list
+msgid "Creado por"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__create_uid
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__create_uid
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__create_date
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__create_date
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__create_date
+msgid "Created on"
+msgstr "Creado"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_res_company__default_package_description
+msgid "Default Package Description"
+msgstr "Descripción del paquete predeterminado"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__realDeliveryDate
+msgid "Delivery Date"
+msgstr "Fecha de entrega"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__description
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_form
+msgid "Destination"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__destination_address
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_address
+msgid "Destination address"
+msgstr "Dirección de destino"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_company
+msgid "Destination company"
+msgstr "Campañía destino"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_crossStreet
+msgid "Destination cross street"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__destination_daneCode
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_daneCode
+msgid "Destination daneCode"
+msgstr "daneCode Destino"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_email
+msgid "Destination email"
+msgstr "Email destino"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_firstName
+msgid "Destination firstName"
+msgstr "Nombres destino"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_lastName
+msgid "Destination lastName"
+msgstr "Apellidos destinos"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_phone
+msgid "Destination phone"
+msgstr "Teléfono destino"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_reference
+msgid "Destination reference"
+msgstr "Referencia destino"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__destination_suburb
+msgid "Destination suburb"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__display_name
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__display_name
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__display_name
+msgid "Display Name"
+msgstr "Nombre Público"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_shipment__state__en_ruta_a_recoleccion
+msgid "En ruta a recolección"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_shipment__state__en_ruta_de_entrega_final
+msgid "En ruta de entrega final"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_shipment__state__en_transito
+msgid "En tránsito"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_res_company__envioclick_endpoint
+msgid "Endpoint"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_shipment__state__entregado
+msgid "Entregado"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.ui.menu,name:odoo_envioclick.odoo_envioclick_menu
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.stock_picking_odoo_envioclick
+msgid "EnvioClick"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+msgid "Esperando"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_search_view
+msgid "Estatus"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__extraInsurance
+msgid "Extra Insurance"
+msgstr "Seguro extra"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__flete
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__flete
+msgid "Flete"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seguidores (Canales)"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Empresas)"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.sale_order_odoo_envioclick
+msgid "Generar Guía"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__guide
+msgid "Guide"
+msgstr "Guía"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__guide_img
+msgid "Guide Image"
+msgstr "Imagen de la Guía"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__guide_pdf
+msgid "Guide PDF"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model,name:odoo_envioclick.model_odoo_envioclick_shipment
+msgid "Guías de EnvioClick"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__height_packages_total
+msgid "Height"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__height
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__height
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__height
+#: model:ir.model.fields,field_description:odoo_envioclick.field_product_product__height
+#: model:ir.model.fields,field_description:odoo_envioclick.field_product_template__height
+#: model:ir.model.fields,field_description:odoo_envioclick.field_stock_picking__height
+msgid "Height(cm)"
+msgstr "Altura"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__id
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__id
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__id
+msgid "ID"
+msgstr "ID de pedido de Woocommerce"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__idCarrier
+msgid "ID Carrier"
+msgstr "ID Transportadora"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__idProduct
+msgid "ID Product"
+msgstr "ID Producto"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__idRate
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__idRate
+msgid "ID Rate"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__message_needaction
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado hay nuevos mensajes que requieren su atención."
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__message_has_error
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__insurance
+msgid "Insurance"
+msgstr "Seguro"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: odoo_envioclick
+#: model:ir.model.constraint,message:odoo_envioclick.constraint_odoo_envioclick_package_type_height_maximo
+msgid "La Altura debe ser menor o igual a 300 cm."
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.constraint,message:odoo_envioclick.constraint_odoo_envioclick_package_type_width_maximo
+msgid "La Anchura debe ser menor o igual a 300 cm."
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.constraint,message:odoo_envioclick.constraint_odoo_envioclick_package_type_length_maximo
+msgid "La Longitud debe ser menor o igual a 300 cm."
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type____last_update
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation____last_update
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__write_uid
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__write_uid
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__write_uid
+msgid "Last Updated by"
+msgstr "Actualizado por"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__write_date
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__write_date
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__write_date
+msgid "Last Updated on"
+msgstr "Actualizado"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__length_packages_total
+msgid "Length"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__length
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__length
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__length
+#: model:ir.model.fields,field_description:odoo_envioclick.field_product_product__length
+#: model:ir.model.fields,field_description:odoo_envioclick.field_product_template__length
+#: model:ir.model.fields,field_description:odoo_envioclick.field_stock_picking__length
+msgid "Length(cm)"
+msgstr "Longitud"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjuntos principales"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Envío de Mensaje"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__minimumInsurance
+msgid "Minimum Insurance"
+msgstr "Seguro mínimo"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__myShipmentReference
+msgid "My Shipment Reference"
+msgstr "Mi referencia de envío"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Siguiente plazo de actividad"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__res_company__pickupDate__next_day
+msgid "Next Day"
+msgstr "Día siguiente"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_has_error_counter
+msgid "Number of errors"
+msgstr "Numero de errores"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Número de mensajes no leidos"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__tracker
+msgid "Número para rastrear guía"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_search_view
+msgid "Ordene de Venta"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__idOrder
+msgid "Order EnvioClick"
+msgstr "Orden EnvioClick"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_form
+msgid "Origin"
+msgstr "Origen"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__origin_address
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_address
+msgid "Origin address"
+msgstr "Dirección de origen"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_company
+msgid "Origin company"
+msgstr "Compañía Origen"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_crossStreet
+msgid "Origin cross street"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__origin_daneCode
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_daneCode
+msgid "Origin daneCode"
+msgstr "daneCode Origen"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_email
+msgid "Origin email"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_firstName
+msgid "Origin firstName"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_lastName
+msgid "Origin lastName"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_phone
+msgid "Origin phone"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_reference
+msgid "Origin reference"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__origin_suburb
+msgid "Origin suburb"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.actions.act_window,name:odoo_envioclick.package_type_window
+#: model:ir.ui.menu,name:odoo_envioclick.odoo_envioclick_package_type_menu
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.package_type_list
+msgid "Package Type"
+msgstr "Tipo de paquete"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__packages
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__packages
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__packages
+#: model:ir.model.fields,field_description:odoo_envioclick.field_stock_picking__packages
+msgid "Packages"
+msgstr "Paquetes"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__partner_id
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__partner_id
+msgid "Partner"
+msgstr "Asociado"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_shipment__state__pendiente_recoleccion
+msgid "Pendiente Recolección"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__realPickupDate
+#: model:ir.model.fields,field_description:odoo_envioclick.field_res_company__pickupDate
+msgid "Pickup Date"
+msgstr "Fecha de recogida"
+
+#. module: odoo_envioclick
+#: model:ir.model,name:odoo_envioclick.model_product_product
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__product
+msgid "Product"
+msgstr "Producto"
+
+#. module: odoo_envioclick
+#: model:ir.model,name:odoo_envioclick.model_product_template
+msgid "Product Template"
+msgstr "Plantilla del Producto"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__quotation_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__sale_order__state_envioclick__quotation
+#: model:ir.ui.menu,name:odoo_envioclick.odoo_envioclick_quotation_menu
+msgid "Quotation"
+msgstr "Cotización"
+
+#. module: odoo_envioclick
+#: model:ir.actions.act_window,name:odoo_envioclick.windows_quotation
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__quotation_id
+msgid "Quotation EnvioClick"
+msgstr "Cotización EnvioClick"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__requestPickup
+#: model:ir.model.fields,field_description:odoo_envioclick.field_res_company__requestPickup
+msgid "Request Pickup"
+msgstr "Solicitar recogida"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega del SMS"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__sale_id
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__sale_id
+msgid "Sale"
+msgstr "Venta"
+
+#. module: odoo_envioclick
+#: model:ir.model,name:odoo_envioclick.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de Venta"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__res_company__pickupDate__same_day
+msgid "Same Day"
+msgstr "El mismo día"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_res_company__insurance
+msgid "Secure Packages"
+msgstr "Paquetes seguros"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.res_company_settings_envioclick
+msgid "Settings"
+msgstr "Ajustes"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.res_company_settings_envioclick
+msgid "Settings EnvioClick"
+msgstr "Ajustes EnvioClick"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__shipment_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_stock_picking__shipment_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__sale_order__state_envioclick__shipment
+#: model:ir.ui.menu,name:odoo_envioclick.odoo_envioclick_shipment_menu
+msgid "Shipment"
+msgstr "Envío"
+
+#. module: odoo_envioclick
+#: model:ir.actions.act_window,name:odoo_envioclick.windows_shipment
+msgid "Shipment EnvioClick"
+msgstr "Envíos de EnvioClick"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__state
+msgid "State"
+msgstr "Estado"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__state
+msgid "State Document"
+msgstr "Estado del documento"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__state_envioclick
+msgid "State Envioclick"
+msgstr "Estatus Envioclick"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_form
+msgid "Status"
+msgstr "Estado"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__statusDetail
+msgid "Status Detail"
+msgstr "Estatus detallado"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__status
+msgid "Status EnvioClick"
+msgstr "Estatus Envioclick"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha tope ya ha pasado\n"
+"Hoy: La fecha tope es hoy\n"
+"Planificada: futuras actividades."
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_res_company__test_mode
+msgid "Test mode"
+msgstr "Ambiente de Pruebas"
+
+#. module: odoo_envioclick
+#: model:ir.model,name:odoo_envioclick.model_odoo_envioclick_package_type
+msgid "Tipos de paquetes"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_list
+msgid "Total"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_form
+msgid "Track"
+msgstr "Rastrear"
+
+#. module: odoo_envioclick
+#: model:ir.model,name:odoo_envioclick.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: odoo_envioclick
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.quotation_search_view
+#: model_terms:ir.ui.view,arch_db:odoo_envioclick.shipment_search_view
+msgid "Transportadora"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__url
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__url_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_stock_picking__url_envioclick
+msgid "URL etiqueta en PDF"
+msgstr ""
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_unread
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contador de mensajes sin leer"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__volume
+msgid "Volume(cm)"
+msgstr "Volumen"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__odoo_envioclick_quotation__state__waiting
+msgid "Waiting"
+msgstr "En Espera"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,help:odoo_envioclick.field_odoo_envioclick_shipment__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicaciones del sitio web"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__weight
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__weight
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__weight_products_total
+#: model:ir.model.fields,field_description:odoo_envioclick.field_stock_picking__weight
+msgid "Weight(kg)"
+msgstr "Peso(kg)"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_sale_order__width_packages_total
+msgid "Width"
+msgstr "Ancho"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_package_type__width
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_quotation__width
+#: model:ir.model.fields,field_description:odoo_envioclick.field_odoo_envioclick_shipment__width
+#: model:ir.model.fields,field_description:odoo_envioclick.field_product_product__width
+#: model:ir.model.fields,field_description:odoo_envioclick.field_product_template__width
+#: model:ir.model.fields,field_description:odoo_envioclick.field_stock_picking__width
+msgid "Width(cm)"
+msgstr "Ancho"
+
+#. module: odoo_envioclick
+#: model:ir.model.fields.selection,name:odoo_envioclick.selection__sale_order__state_envioclick__without_quotation
+msgid "Without Quotation"
+msgstr "Sin cotización"
+
+#. module: odoo_envioclick
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#, python-format
+msgid "¡Debe configurar el API KEY de EnvioClick!"
+msgstr ""
+
+#. module: odoo_envioclick
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#, python-format
+msgid "¡Debe seleccionar una cotización de EnvioClick!"
+msgstr ""
+
+#. module: odoo_envioclick
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#, python-format
+msgid ""
+"¡El peso de los productos no puede ser 0, verifique las dimenciones y peso "
+"de los productos!"
+msgstr ""
+
+#. module: odoo_envioclick
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#, python-format
+msgid "¡El peso mámixo debe ser 1000kg!"
+msgstr ""
+
+#. module: odoo_envioclick
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#: code:addons/odoo_envioclick/models/shipment_envioclick.py:0
+#, python-format
+msgid "¡No hay respuesta de EnvioClick!"
+msgstr ""
+
+#. module: odoo_envioclick
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#, python-format
+msgid ""
+"¡No hay una caja asignada a este pedido, verifique la configuración de las "
+"Cajas!"
+msgstr ""
+
+#. module: odoo_envioclick
+#: code:addons/odoo_envioclick/models/sale_order.py:0
+#, python-format
+msgid "¡No se recibió ninguna cotización!"
+msgstr ""
